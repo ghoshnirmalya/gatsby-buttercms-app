@@ -4,10 +4,10 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby and Tailwind CSS',
-    description: 'Sample app built using Gatsby and Tailwind CSS',
-    keywords: 'gatsby, tailwindcss, react, javascript',
-    siteUrl: 'https://gatsby-tailwindcss.netlify.com',
+    title: 'Gatsby, ButterCMS and Tailwind CSS',
+    description: 'Sample app built using Gatsby, ButterCMS and TailwindCSS',
+    keywords: 'gatsby, buttercms, react, javascript',
+    siteUrl: 'https://gatsby-buttercms-app.netlify.com/',
     author: {
       name: 'Nirmalya Ghosh',
       url: 'https://www.nirmalyaghosh.com',

@@ -1,8 +1,8 @@
-# Sample app built using Gatsby and Tailwind CSS
+# Sample app built using Gatsby, ButterCMS and Tailwind CSS
 
-A starter template for building JAMStack apps using Gatsby and Tailwind CSS
+A starter template for building JAMStack apps using Gatsby, ButterCMS and Tailwind CSS
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/8cab0292-40e0-4b96-8a19-d7b72f928950/deploy-status)](https://app.netlify.com/sites/gatsby-tailwind-minimal-starter/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bdeb701e-a2e9-46c0-b611-3f78a563cfc3/deploy-status)](https://app.netlify.com/sites/gatsby-buttercms-app/deploys)
 
 ## Getting Started
 
@@ -43,9 +43,11 @@ This will spin up the development server at [localhost:8000](http://localhost:80
 ## Built With
 
 - [Gatsby](https://www.gatsbyjs.org/) - Gatsby is a free and open source framework based on React that helps developers build blazing fast websites and apps
+- [ButterCMS](https://buttercms.com/) - Headless CMS and Content API
 - [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for
   rapidly building custom designs.
 - [React](https://reactjs.org/) - A JavaScript library for building user interfaces
+- [Netlify](https://www.netlify.com/) - All-in-one platform for automating modern web projects
 
 ## Authors
 

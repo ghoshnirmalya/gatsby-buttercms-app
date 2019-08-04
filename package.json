@@ -1,11 +1,12 @@
 {
-  "name": "gatsby-tailwind-minimal-starter",
-  "description": "Sample app built using Gatsby and Tailwind CSS",
+  "name": "gatsby-buttercms-app",
+  "description": "Sample app built using Gatsby, ButterCMS and TailwindCSS",
   "version": "0.0.1",
   "private": false,
   "author": "Nirmalya Ghosh <nirmalya.email@gmail.com>",
   "keywords": [
     "gatsby",
+    "buttercms",
     "tailwindcss"
   ],
   "license": "MIT",
