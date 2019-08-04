@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: 'Gatsby and Tailwind CSS',
@@ -15,12 +19,10 @@ module.exports = {
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: 'gatsby-source-buttercms',
       options: {
-        name: 'content',
-        path: `${__dirname}/content`,
+        authToken: process.env.GATSBY_BUTTER_CMS_API_KEY,
       },
     },
-    'gatsby-transformer-remark',
   ],
 }

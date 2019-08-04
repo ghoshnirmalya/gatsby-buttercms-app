@@ -1,43 +1,42 @@
-import * as React from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 
 interface BlogPostProps {
   data: {
-    markdownRemark: {
-      html: string
-      frontmatter: {
-        title: string
-        date: string
-      }
+    butterPost: {
+      date: string
+      body: string
+      title: string
     }
   }
 }
 
 export default function Template({ data }: BlogPostProps) {
-  const { markdownRemark } = data // data.markdownRemark holds our post data
-  const { frontmatter, html } = markdownRemark
+  const { title, date, body } = data.butterPost
 
   return (
     <Layout>
       <div className="max-w-2xl mx-auto">
-        <h1 className="font-bold mb-8 text-4xl">{frontmatter.title}</h1>
-        <h2 className="font-semibold mb-8 text-base">Published on {frontmatter.date}</h2>
-        <div className="text-xl font-serif leading-relaxed" dangerouslySetInnerHTML={{ __html: html }} />
+        <h1 className="font-bold mb-8 text-4xl">{title}</h1>
+        <h2 className="font-semibold mb-8 text-base">Published on {date}</h2>
+        <div className="text-xl font-serif leading-relaxed" dangerouslySetInnerHTML={{ __html: body }} />
       </div>
     </Layout>
   )
 }
 
 export const pageQuery = graphql`
-  query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        path
-        title
+  query($slug: String!) {
+    butterPost(slug: { eq: $slug }) {
+      title
+      body
+      date
+      meta_description
+      status
+      tags {
+        name
       }
     }
   }

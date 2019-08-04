@@ -2,19 +2,15 @@ const path = require('path')
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
-  const template = path.resolve('src/templates/blog-post.tsx')
+
+  const template = path.resolve(`src/templates/blog-post.tsx`)
 
   return graphql(`
     {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
-      ) {
+      allButterPost {
         edges {
           node {
-            frontmatter {
-              path
-            }
+            slug
           }
         }
       }
@@ -24,9 +20,9 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    result.data.allButterPost.edges.forEach(({ node }) => {
       createPage({
-        path: node.frontmatter.path,
+        path: `/blogs/${node.slug}`,
         component: template,
         context: {
           slug: node.slug,
