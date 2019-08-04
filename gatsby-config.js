@@ -10,5 +10,17 @@ module.exports = {
       email: 'nirmalya.email@gmail.com',
     },
   },
-  plugins: ['gatsby-plugin-typescript','gatsby-plugin-postcss', 'gatsby-plugin-react-helmet'],
+  plugins: [
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-postcss',
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'content',
+        path: `${__dirname}/content`,
+      },
+    },
+    'gatsby-transformer-remark',
+  ],
 }
